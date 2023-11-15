@@ -1,0 +1,68 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %> 
+<head>
+    <!-- making a margin to see everything -->
+    <style>
+        main.container {
+            margin-bottom: 150px; /* Adjust the value to set the desired space between content and footer */
+        }
+    </style>
+</head>
+
+<main>
+    <!-- main  Content-->
+    <div class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+            <div class="row">
+            <div class="offset-md-1 col-md-14">
+     
+
+            <table class="table table-bordered table-striped table-hover table-dark">
+                <tr class="d-flex">
+                    <th class="text-center col-2">Name of Assignment</th>
+                    <th class="text-center col-4">Description of Assignment</th>
+                    <th class="text-center col-2">Due Date of Assignment</th>
+                    <th class="text-center col-2">To Edit Assignment</th>
+                    <th class="text-center col-2">To Delete Assignment</th>
+                </tr>
+                <% for(let count=0;count<assignments.length;count++) { %>    
+                    <tr class="d-flex">
+                        <td class="text-center col-2"><%= assignments[count].Name %></td>
+                        <td class="text-center col-4"><%= assignments[count].Description %></td>
+                        <td class="text-center col-2"><%= assignments[count].DueDate %></td>
+                        <td class="text-center col-2">
+                            <a href="/assignments/edit/<%= assignments[count]._id %>"
+                            class="btn btn-primary"
+                            style="background-color: rgba(47, 240, 41, 1); color: black;">
+                            <i class="fa-solid fa-rotate"></i> Update
+                            </a>
+                        </td>
+                        <td class="text-center col-2">
+                            <a href ="/assignments/delete/<%= assignments[count]._id %>"
+                                class="btn btn-danger">
+                                <i class="fa-solid fa-xmark"></i> DELETE </a>
+                        </td>
+                    </tr>
+                <% } %>
+        </table> 
+                <a href="/assignments/add" class ="btn btn-light" 
+                style="background-color: rgba(0, 255, 247, 1); color: black;"
+                role = "button">
+                <i class="fa-regular fa-square-plus"></i> Add An Assignment
+                </a>         
+        
+        
+        
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+</main>
+
+
+<%- include ../partials/bottom_nav.ejs %> 
+<!--footer-->
+<%- include ../partials/footer.ejs %> 

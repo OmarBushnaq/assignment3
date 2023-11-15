@@ -1,0 +1,67 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %> 
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 cl-md-6 text-center">
+        <h1 style="color: blue;"><%= title %></h1>
+        <form class="form" method="POSt">
+
+            <div class="form-group">
+                <label for="NameTextField">Assignment Title</label>
+                <input type="text" class="form-control"
+                id="NameTextField"
+                placeholder="Enter the assignment title"
+                name="Name"
+                required
+                style="background-color: rgba(0, 210, 255, 1);"
+                style="color: black;">
+            </div>
+
+
+            <div class="form-group">
+                <label for="DescriptionTextField">Assignment Description</label>
+                <input type="text" class="form-control"
+                id="DescriptionTextField"
+                placeholder="Enter the assignment Description"
+                name="Description"
+                required
+                style="background-color: rgba(0, 210, 255, 1);"
+                style="color: black;">
+            </div>
+
+
+            <div class="form-group">
+                <label for="DueDateTextField">Assignment Due Date</label>
+                <input type="text" class="form-control"
+                id="DueDateTextField"
+                placeholder="Enter the assignment due date"
+                name="DueDate"
+                required
+                style="background-color: rgba(0, 210, 255, 1);"
+                style="color: black;">
+            </div>
+            <br>
+            <button class="btn btn-primary" type="submit"
+            style="background-color: rgba(47, 240, 41, 1); color: black;">
+                <i class="fa-solid fa-thumbs-up"></i> Submit
+            </button>
+
+            <a href="/assignments" class="btn btn-warning"
+                style="background-color: rgba(255, 0, 0, 1); color: black;">
+                <i class="fa-solid fa-ban"></i> Cancel
+            </a>
+            </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<%- include ../partials/bottom_nav.ejs %> 
+<!--footer-->
+<%- include ../partials/footer.ejs %> 
