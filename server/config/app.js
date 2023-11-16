@@ -7,7 +7,7 @@ let logger = require('morgan');
 
 let mongoose = require('mongoose');
 let DB = require('./db');
-
+//this is the mongoose connection
 mongoose.connect(DB.URI);
 let mongoDB = mongoose.connection;
 mongoDB.on('error',console.error.bind(console,'Connection Error'));

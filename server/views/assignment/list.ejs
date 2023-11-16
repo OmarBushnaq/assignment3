@@ -20,13 +20,16 @@
 
             <table class="table table-bordered table-striped table-hover table-dark">
                 <tr class="d-flex">
+                <!--This is for the table-->
                     <th class="text-center col-2">Name of Assignment</th>
                     <th class="text-center col-4">Description of Assignment</th>
                     <th class="text-center col-2">Due Date of Assignment</th>
                     <th class="text-center col-2">To Edit Assignment</th>
                     <th class="text-center col-2">To Delete Assignment</th>
                 </tr>
+                <!--This is for the table contents-->
                 <% for(let count=0;count<assignments.length;count++) { %>    
+    
                     <tr class="d-flex">
                         <td class="text-center col-2"><%= assignments[count].Name %></td>
                         <td class="text-center col-4"><%= assignments[count].Description %></td>
